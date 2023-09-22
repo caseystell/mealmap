@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<div class="detail">
+    <h1 id="detail-header">{{ recipe.name }} Details</h1>
+
+    <div class="campsite-info">
+        <div class="card" id="detail-card">
+            <a class="btn" href="{% url 'recipes_update' recipe.id %}">Edit</a>
+            <a class="btn" href="{% url 'recipes_delete' recipe.id %}">Delete</a>
+        </div>
+    </div>
+
+    <a href="{% url 'index' %}">Back to All Recipes</a>
+</div>
+{% endblock %}
